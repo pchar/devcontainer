@@ -1,16 +1,25 @@
+
 {
-  "name": "Helm/Helmfile Dev Container",
-  "build": {
-    "dockerfile": "../Dockerfile"
-  },
+  "name": "Helm / Helmfile Dev Container (K8s)",
+
+  // IMPORTANT: attach mode → no build
+  "workspaceFolder": "/workspace",
+
+  "remoteUser": "root",
+
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-kubernetes-tools.vscode-kubernetes-tools",
         "redhat.vscode-yaml"
-      ]
+      ],
+      "settings": {
+        // ✅ Disable all VS Code telemetry
+        "telemetry.telemetryLevel": "off",
+
+        // Optional but recommended
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
     }
-  },
-  "features": {},
-  "remoteUser": "vscode"
+  }
 }
