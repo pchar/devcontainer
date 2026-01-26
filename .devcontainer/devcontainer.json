@@ -1,0 +1,16 @@
+{
+  "name": "Helm/Helmfile Dev Container",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-kubernetes-tools.vscode-kubernetes-tools",
+        "redhat.vscode-yaml"
+      ]
+    }
+  },
+  "features": {},
+  "remoteUser": "vscode"
+}
