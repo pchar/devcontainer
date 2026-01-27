@@ -26,6 +26,7 @@ RUN apt-get update && apt-get install -y \
     iputils-ping \
     net-tools \
     python3 \
+    vim \
     python3-pip \
  && rm -rf /var/lib/apt/lists/*
 
