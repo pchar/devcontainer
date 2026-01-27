@@ -49,6 +49,12 @@ RUN curl -fsSL https://github.com/helmfile/helmfile/releases/download/v${HELMFIL
  | tar -xz \
  && mv helmfile /usr/local/bin/helmfile
 
+ 
+# ---- argo-cd cli  ----
+RUN curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64 \ 
+&& chmod +x /usr/local/bin/argocd
+
+
 # ---- kubeconform (schema validation) ----
 RUN curl -fsSL \
       https://github.com/yannh/kubeconform/releases/download/v${KUBECONFORM_VERSION}/kubeconform-linux-amd64.tar.gz \
