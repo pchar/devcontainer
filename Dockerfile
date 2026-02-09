@@ -10,7 +10,7 @@ ARG KUBECONFORM_VERSION=0.6.6
 ARG KUBE_LINTER_VERSION=0.7.1
 
 ENV DEBIAN_FRONTEND=noninteractive
-
+ENV CONTAINER_VERSION="1.0.0"
 # Base packages + yamllint
 # - python3 + pip are used to install yamllint reliably on Ubuntu 22.04
 RUN apt-get update && apt-get install -y \
@@ -26,6 +26,9 @@ RUN apt-get update && apt-get install -y \
     iputils-ping \
     net-tools \
     python3 \
+    updatedb \
+    traceroute \
+    netcat \
     vim \
     python3-pip \
  && rm -rf /var/lib/apt/lists/*
