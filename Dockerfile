@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install -y \
     iputils-ping \
     net-tools \
     python3 \
-    updatedb \
+    mlocate \
     traceroute \
     netcat \
     vim \
