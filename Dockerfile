@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install -y \
     python3 \
     mlocate \
     traceroute \
+    pre-commits \
     netcat \
     vim \
     python3-pip \
