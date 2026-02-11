@@ -35,8 +35,8 @@ RUN apt-get update && apt-get install -y \
 
 # ---- yamllint ----
 RUN pip3 install --no-cache-dir yamllint
-RUN pip3 install --upgrade pip pip3  setuptools
-RUN pip3 install --upgrade pip pip3 setuptools pre-commit \
+RUN pip3 install --upgrade pip   setuptools
+RUN pip3 install --upgrade  setuptools pre-commit \
     flake8 isort black yapf mypy autopep8 pyyaml ruamel.yaml
 # ---- pre-commit  ----
 # ---- kubectl ----
