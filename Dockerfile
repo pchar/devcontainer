@@ -35,7 +35,7 @@ RUN apt-get update && apt-get install -y \
 
 # ---- yamllint ----
 RUN pip3 install --no-cache-dir yamllint
-
+RUN pip install --upgrade pip setuptools
 # ---- pre-commit  ----
 RUN pip3 install --no-cache-dir  pre-commit
 # ---- kubectl ----
