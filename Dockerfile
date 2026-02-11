@@ -28,7 +28,6 @@ RUN apt-get update && apt-get install -y \
     python3 \
     mlocate \
     traceroute \
-    pre-commits \
     netcat \
     vim \
     python3-pip \
@@ -37,6 +36,8 @@ RUN apt-get update && apt-get install -y \
 # ---- yamllint ----
 RUN pip3 install --no-cache-dir yamllint
 
+# ---- pre-commit  ----
+RUN pip3 install --no-cache-dir  pre-commit
 # ---- kubectl ----
 RUN curl -fsSL https://dl.k8s.io/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl \
     -o /usr/local/bin/kubectl \
