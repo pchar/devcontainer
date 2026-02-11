@@ -35,9 +35,10 @@ RUN apt-get update && apt-get install -y \
 
 # ---- yamllint ----
 RUN pip3 install --no-cache-dir yamllint
-RUN pip install --upgrade pip setuptools
+RUN pip3 install --upgrade pip pip3  setuptools
+RUN pip3 install --upgrade pip pip3 setuptools pre-commit \
+    flake8 isort black yapf mypy autopep8 pyyaml ruamel.yaml
 # ---- pre-commit  ----
-RUN pip3 install --no-cache-dir  pre-commit
 # ---- kubectl ----
 RUN curl -fsSL https://dl.k8s.io/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl \
     -o /usr/local/bin/kubectl \
